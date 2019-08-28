@@ -1,7 +1,9 @@
 $(function() {
+	const API_ROOT = '/films';
+
 	const fetchData = () => {
 		$.ajax({
-			url: 'http://localhost:3000/db',
+			url: API_ROOT,
 			type: 'GET',
 			dataType: 'json',
 			beforeSend: function() {
@@ -13,8 +15,7 @@ $(function() {
 			error: function() { //giống kiểu .fail()
 				$('#no_result').text('Failed');
 			},
-			success: function(data) { //giống kiểu .done()
-				let films = data.films;
+			success: function(films) { //giống kiểu .done()
 				let results = [];
 				let compare = {
 					name: function(a,b) {
@@ -62,7 +63,7 @@ $(function() {
 						$(this).parent().parent().hide(400);
 
 						$.ajax({
-							url: `http://localhost:3000/films/${$(this).data('id')}`,
+							url: API_ROOT + `/${$(this).data('id')}`,
 							type: 'DELETE'
 						})
 						.done(function() {
@@ -79,7 +80,7 @@ $(function() {
 					$('.edit').on('click', function(event) {
 						event.preventDefault();
 
-						$.get(`http://localhost:3000/films/${$(this).data('id')}`, function(data) {
+						$.get(API_ROOT + `/${$(this).data('id')}`, function(data) {
 							putModal.find('legend').attr('data-id', data.id);
 							putModal.find('#genre').val(data.genre);
 							putModal.find('#title').val(data.title);
@@ -170,7 +171,7 @@ $(function() {
 		postModal.hide();
 
 		$.ajax({
-			url: 'http://localhost:3000/films',
+			url: API_ROOT,
 			type: 'POST',
 			dataType: 'json',
 			data: {
@@ -198,7 +199,7 @@ $(function() {
 		putModal.hide();
 
 		$.ajax({
-			url: `http://localhost:3000/films/${$(this).find('legend')[0].getAttribute('data-id')}`,
+			url: API_ROOT + `/${$(this).find('legend')[0].getAttribute('data-id')}`,
 			type: 'PUT',
 			dataType: 'json',
 			data: {
