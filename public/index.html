@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>AJAX</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="ajax.css">
+</head>
+<body>
+	<div class="wrapper">
+		<input type="search" name="search" placeholder="Search">
+		<br>
+		<h1>Movies</h1>
+		<div style="text-align: left;"><h3><i style="font-size: 10px; transform: translateY(-9px);" class="fas fa-plus fa-xs"></i><i style="padding-right: 7px; padding-left: 2px" class="fas fa-film"></i>Create new movie</h3></div>
+		
+		<div style="overflow-x:auto;">
+			<table>
+				<thead>
+					<tr>
+						<th class="normal" data-sort="name">GENRE</th>
+						<th class="normal" data-sort="name">TITLE</th>
+						<th class="normal" data-sort="duration">DURATION</th>
+						<th class="normal" data-sort="date">DATE</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+		</div>
+		<p id="no_result"></p>
+	</div>
+
+	<div id="postModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<form method="POST">
+				<fieldset>
+					<legend>New Movie</legend>
+					<p>
+						<label for="genre">Genre:</label>
+						<input id="genre" type="text" name="genre" autofocus>
+					</p>
+					<p>
+						<label for="title">Title:</label>
+						<input id="title" type="text" name="title" required>					
+					</p>
+					<p>
+						<label for="duration">Duration:</label>
+						<input id="duration" type="text" name="duration">
+					</p>
+					<p>
+						<label for="date">Date:</label>
+						<input id="date" type="text" name="date">
+					</p>
+					
+					<input id="submit" type="submit" value="Save">
+				</fieldset>
+			
+			</form>
+
+		</div>
+
+	</div>
+
+	<div id="putModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<form method="POST">
+				<fieldset>
+					<legend>Edit Movie</legend>
+					<p>
+						<label for="genre">Genre:</label>
+						<input id="genre" type="text" name="genre" autofocus>
+					</p>
+					<p>
+						<label for="title">Title:</label>
+						<input id="title" type="text" name="title" required>					
+					</p>
+					<p>
+						<label for="duration">Duration:</label>
+						<input id="duration" type="text" name="duration">
+					</p>
+					<p>
+						<label for="date">Date:</label>
+						<input id="date" type="text" name="date">
+					</p>
+					
+					<input id="submit" type="submit" value="Save">
+				</fieldset>
+			
+			</form>
+
+		</div>
+
+	</div>
+	
+	<script src="https://kit.fontawesome.com/c2224d8649.js"></script>
+	<script
+	src="https://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
+	<script type="text/javascript" src="ajax.js"></script>
+</body>
+</html>

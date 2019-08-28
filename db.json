@@ -1,0 +1,60 @@
+{
+  "films": [
+    {
+      "id": 1,
+      "genre": "Animation",
+      "title": "Wildfood",
+      "duration": "3:47",
+      "date": "2014-07-16"
+    },
+    {
+      "id": 2,
+      "genre": "Film",
+      "title": "The Deer",
+      "duration": "6:24",
+      "date": "2014-02-28"
+    },
+    {
+      "id": 3,
+      "genre": "Animation",
+      "title": "The Ghost",
+      "duration": "11:40",
+      "date": "2012-04-10"
+    },
+    {
+      "id": 4,
+      "genre": "Film",
+      "title": "Animals",
+      "duration": "6:40",
+      "date": "2005-12-21"
+    },
+    {
+      "genre": "Animation",
+      "title": "Wagons",
+      "duration": "21:40",
+      "date": "2007-04-12",
+      "id": 5
+    },
+    {
+      "genre": "mmm",
+      "title": "nnnmmm",
+      "duration": "hi",
+      "date": "",
+      "id": 6
+    },
+    {
+      "genre": "hello",
+      "title": "hl",
+      "duration": "okok",
+      "date": "",
+      "id": 7
+    },
+    {
+      "genre": "yyy",
+      "title": "eee",
+      "duration": "mmm",
+      "date": "nnnn",
+      "id": 8
+    }
+  ]
+}
