@@ -60,21 +60,25 @@ $(function() {
 				function bindEvent() {
 					$('.delete').on('click', function(event) {
 						event.preventDefault();
-						$(this).parent().parent().hide(400);
 
-						$.ajax({
-							url: API_ROOT + `/${$(this).data('id')}`,
-							type: 'DELETE'
-						})
-						.done(function() {
-							console.log("success");
-						})
-						.fail(function() {
-							console.log("error");
-						})
-						.always(function() {
-							console.log("complete");
-						});
+						if (confirm("Are you sure you want to delete it?")) {						
+							$(this).parent().parent().hide(400);
+
+							$.ajax({
+								url: API_ROOT + `/${$(this).data('id')}`,
+								type: 'DELETE'
+							})
+							.done(function() {
+								console.log("success");
+							})
+							.fail(function() {
+								console.log("error");
+							})
+							.always(function() {
+								console.log("complete");
+							});
+						} else return;
+
 					});
 
 					$('.edit').on('click', function(event) {
