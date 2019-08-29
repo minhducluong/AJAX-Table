@@ -172,6 +172,7 @@ $(function() {
 
 	$('#postModal form').on('submit', function(event) {
 		event.preventDefault();
+		$('[type="search"]').val("");
 		postModal.hide();
 
 		$.ajax({
