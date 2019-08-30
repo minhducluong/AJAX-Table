@@ -81,16 +81,16 @@ $(function() {
 
 					});
 
+					// When "Edit" is clicked
 					$('.edit').on('click', function(event) {
 						event.preventDefault();
+						let td_Siblings = $(this).parent().siblings();
 
-						$.get(API_ROOT + `/${$(this).data('id')}`, function(data) {
-							putModal.find('legend').attr('data-id', data.id);
-							putModal.find('#genre').val(data.genre);
-							putModal.find('#title').val(data.title);
-							putModal.find('#duration').val(data.duration);
-							putModal.find('#date').val(data.date);
-						});
+						putModal.find('legend').attr('data-id', $(this).data('id'));
+						putModal.find('#genre').val(td_Siblings[0].textContent);
+						putModal.find('#title').val(td_Siblings[1].textContent);
+						putModal.find('#duration').val(td_Siblings[2].textContent);
+						putModal.find('#date').val(td_Siblings[3].textContent);
 
 						putModal.show();
 						putModal.find('#genre').select();
