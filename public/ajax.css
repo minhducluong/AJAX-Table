@@ -213,6 +213,11 @@ fieldset p {
 	padding: 0 calc((100% - 271px) / 2);
 }
 
+.content {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
 .option {
 	display: flex;
 	justify-content: space-around;
