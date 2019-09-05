@@ -9,15 +9,18 @@
 </head>
 <body>
 	<div class="wrapper">
-		<input type="search" name="search" placeholder="Search">
 		<br>
 		<h1>Movies</h1>
-		<div style="text-align: left;"><h3><i style="font-size: 10px; transform: translateY(-9px);" class="fas fa-plus fa-xs"></i><i style="padding-right: 7px; padding-left: 2px" class="fas fa-film"></i>Create new movie</h3></div>
+		<div style="text-align: left; display: flex; justify-content: space-between; align-items: center;">
+			<h3><i style="font-size: 10px; transform: translateY(-9px);" class="fas fa-plus fa-xs"></i><i style="padding-right: 7px; padding-left: 2px" class="fas fa-film"></i>Create new movie</h3>
+			<input type="search" name="search" placeholder="Search">
+		</div>
 		
 		<div style="overflow-x:auto;">
 			<table>
 				<thead>
 					<tr>
+						<th><input type="checkbox"></th>
 						<th class="normal" data-sort="name">GENRE</th>
 						<th class="normal" data-sort="name">TITLE</th>
 						<th class="normal" data-sort="duration">DURATION</th>
@@ -30,7 +33,10 @@
 				</tbody>
 			</table>
 		</div>
+		<div style="margin-top: 20px"><span id="delete-selected">Delete Selected</span></div>
+		
 		<p id="no_result"></p>
+		<p id="alert"></p>
 	</div>
 
 	<div id="postModal" class="modal">
@@ -99,6 +105,19 @@
 
 		</div>
 
+	</div>
+
+	<div id="notiModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<div class="content">
+				<h2 style="text-align: center; margin-bottom: 30px;">Are you sure you want to delete these rows?</h2>
+				<div class="option">
+					<div class="yes">Yes</div>
+					<div class="no">No</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	
 	<script src="https://kit.fontawesome.com/c2224d8649.js"></script>

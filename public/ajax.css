@@ -2,8 +2,14 @@ body {
 	margin: 0;
 }
 
-a {
+.edit {
+	color: #747474;
+	cursor: pointer;
+}
+
+.edit:hover {
 	color: #009688;
+	text-decoration: underline;
 }
 
 .wrapper {
@@ -16,9 +22,9 @@ input[type='search'] {
 	padding: 0 5px;
 	border: 1px solid #009688;
 	width: 153px;
-	height: 25px;
+	height: 30px;
 	display: inline-block;
-	border-radius: 12px;
+	border-radius: 5px;
 	margin-right: 7px;
 }
 
@@ -42,7 +48,7 @@ h3 {
 	border: 1px solid #009588d9;
 	color: #009588d9;
 	margin-bottom: 1rem;
-	margin-left: 1rem;
+	margin-left: 7px;
 	padding: .25rem .5rem;
 	border-radius: 5px;
 }
@@ -62,15 +68,17 @@ th, td {
 th {
 	background-color: #009688a6;
 	color: white;
-	width: 20%;
+	width: calc((100% - 40px) / 5);
 }
 
 th:first-child {
-	border-top-left-radius: 10px;
+	border-top-left-radius: 7px;
+	width: 40px;
 }
 
 th:last-child {
-	border-top-right-radius: 10px;
+	border-top-right-radius: 7px;
+	cursor: pointer;
 }
 
 /*th.ascending::after {
@@ -203,6 +211,38 @@ legend {
 
 fieldset p {
 	padding: 0 calc((100% - 271px) / 2);
+}
+
+.option {
+	display: flex;
+	justify-content: space-around;
+	margin: 0 100px;
+}
+
+.yes, .no {
+	background-color: #009688a6;
+	border-radius: 5px;
+	padding: 0.5rem 1.75rem;
+	color: white;
+	cursor: pointer;
+}
+
+.yes:hover, .no:hover {
+	background-color: #018b7e;
+}
+
+#delete-selected {
+	display: none;
+	cursor: pointer;
+	border: 1px solid #009588d9;
+	color: #009588d9;
+	font-weight: bold;
+	padding: .25rem .75rem;
+}
+
+#delete-selected:hover {
+	background-color: #009688a6;
+	color: white;
 }
 
 @media (max-width: 576px) {
