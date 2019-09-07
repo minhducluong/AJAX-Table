@@ -182,7 +182,10 @@ SEARCH function
 */
 
 	//Search
-	$('[type="search"]').on('click', getDataAndRender);
+	$('[type="search"]').on('click', function() {
+		getDataAndRender();
+		$('th:not(.unsortable)').attr('class', 'normal');
+	});
 
 	$('[type="search"]').on('input', function() { 
 		if ($(this).val() == '') {//Luôn show hết data lên bảng khi input rỗng
