@@ -20,12 +20,12 @@
 			<table>
 				<thead>
 					<tr>
-						<th><input type="checkbox"></th>
+						<th class="unsortable"><input type="checkbox"></th>
 						<th class="normal" data-sort="name">GENRE</th>
 						<th class="normal" data-sort="name">TITLE</th>
 						<th class="normal" data-sort="duration">DURATION</th>
 						<th class="normal" data-sort="date">DATE</th>
-						<th></th>
+						<th class="unsortable"></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -49,19 +49,19 @@
 					<legend>New Movie</legend>
 					<p>
 						<label for="genre">Genre:</label>
-						<input id="genre" type="text" name="genre" autofocus>
+						<input id="genre" type="text" name="genre" placeholder="Animation" autofocus>
 					</p>
 					<p>
 						<label for="title">Title:</label>
-						<input id="title" type="text" name="title" required>					
+						<input id="title" type="text" name="title" placeholder="Naruto" required>					
 					</p>
 					<p>
 						<label for="duration">Duration:</label>
-						<input id="duration" type="text" name="duration">
+						<input id="duration" type="time" name="duration" placeholder="05:00" value="05:00">
 					</p>
 					<p>
 						<label for="date">Date:</label>
-						<input id="date" type="text" name="date">
+						<input id="date" type="date" name="date" value="2010-12-09">
 					</p>
 					
 					<input id="submit" type="submit" value="Save">
@@ -83,15 +83,15 @@
 					<legend>Edit Movie</legend>
 					<p>
 						<label for="genre">Genre:</label>
-						<input id="genre" type="text" name="genre" autofocus>
+						<input id="genre" type="text" name="genre" placeholder="Animation" autofocus>
 					</p>
 					<p>
 						<label for="title">Title:</label>
-						<input id="title" type="text" name="title" required>					
+						<input id="title" type="text" name="title" placeholder="Naruto" required>					
 					</p>
 					<p>
 						<label for="duration">Duration:</label>
-						<input id="duration" type="text" name="duration">
+						<input id="duration" type="time" name="duration" placeholder="45:00">
 					</p>
 					<p>
 						<label for="date">Date:</label>
@@ -108,7 +108,7 @@
 	</div>
 
 	<div id="notiModal" class="modal">
-		<div class="modal-content">
+		<div class="modal-content" style="width: 50%">
 			<span class="close">&times;</span>
 			<div class="content">
 				<h2 style="text-align: center; margin-bottom: 30px;">Are you sure you want to delete these rows?</h2>
