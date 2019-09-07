@@ -4,14 +4,14 @@
       "id": 1,
       "genre": "Animation",
       "title": "Wildfood",
-      "duration": "3:47",
+      "duration": "03:47",
       "date": "2014-07-16"
     },
     {
       "id": 2,
       "genre": "Film",
       "title": "The Deer",
-      "duration": "6:24",
+      "duration": "06:24",
       "date": "2014-02-28"
     },
     {
@@ -25,7 +25,7 @@
       "id": 4,
       "genre": "Film",
       "title": "Animals",
-      "duration": "6:40",
+      "duration": "06:40",
       "date": "2005-12-21"
     },
     {
@@ -34,27 +34,6 @@
       "duration": "21:40",
       "date": "2007-04-12",
       "id": 5
-    },
-    {
-      "genre": "mmm",
-      "title": "nnnmmm",
-      "duration": "hi",
-      "date": "",
-      "id": 6
-    },
-    {
-      "genre": "hello",
-      "title": "hl",
-      "duration": "okok",
-      "date": "",
-      "id": 7
-    },
-    {
-      "genre": "yyy",
-      "title": "eee",
-      "duration": "mmm",
-      "date": "nnnn",
-      "id": 8
     }
   ]
 }
