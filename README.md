@@ -7,5 +7,5 @@
 # Sử dụng herokuapp.com để host
 
 # Cũng có thể sử dụng localhost để chạy
-Sử dụng lệnh json-server --watch db.json
+Sử dụng lệnh json-server --watch db.json  
 Sau đó truy cập localhost:3000
