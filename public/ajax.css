@@ -18,6 +18,13 @@ body {
 	text-align: center;
 }
 
+.below-movies {
+	text-align: left; 
+	display: flex; 
+	justify-content: space-between; 
+	align-items: center;
+}
+
 input[type='search'] {
 	padding: 0 5px;
 	border: 1px solid #009688;
@@ -68,7 +75,6 @@ th, td {
 th {
 	background-color: #009688a6;
 	color: white;
-	width: calc((100% - 40px) / 5);
 	cursor: pointer;
 }
 
@@ -261,12 +267,27 @@ fieldset p {
 		white-space: nowrap;
 	}
 }
-@media (width: 320px) {
-	th {
+@media (max-width: 360px) {
+	.create {
+		display: none;
+	}
+	th:not(.unsortable) {
 		padding-left: 5px;
 	}
 	th.ascending::after, th.descending::after, th.normal::after {
 		float: none;
 		padding-left: 5px;
+	}
+	h3 {
+		padding: .25rem .25rem .05rem;
+		margin-bottom: 0.5rem;
+		margin-top: 0.5rem;
+	}
+	input[type='text'] {
+		width: 130px;
+	}
+	input[type='search'] {
+		width: 100px;
+		height: 25px;
 	}
 }

@@ -254,14 +254,12 @@ SORT function
 		let $rows = $('tbody tr').toArray(); //lấy các <tr> hiện tại lưu vào 1 mảng
 
 		if ($(this).is('.ascending') || $(this).is('.descending')) {
-			console.log('toggled')
 
 			$(this).toggleClass('ascending descending');
 			$('tbody').append($rows.reverse());
 		}
-		if ($(this).is('.normal')) {
-			console.log('1st sort')
 
+		if ($(this).is('.normal')) {
 
 			$(this).siblings(':not(.unsortable)').attr('class', 'normal'); //Khi sort sang <th> khác thì các <th> còn lại về normal
 			$(this).attr('class', 'ascending');
