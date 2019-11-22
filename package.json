@@ -5,20 +5,6 @@
   "scripts": {
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/minhducluong/heroku.git"
-  },
-  "keywords": [
-    "jquery",
-    "ajax"
-  ],
-  "author": "Minh Duc Luong",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/minhducluong/heroku/issues"
-  },
-  "homepage": "https://github.com/minhducluong/heroku#readme",
   "dependencies": {
     "json-server": "^0.14.2"
   }
